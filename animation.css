@@ -1,0 +1,155 @@
+.waves{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: scale(1.20);
+}
+
+
+
+@keyframes wavesMove{
+    from{
+        transform: translate(-90px, 20px);
+
+    }
+}
+
+@keyframes wavesMove2{
+    from{
+        transform: translate(-90px ,-25px) 
+    }
+}
+
+@keyframes wavesMove3{
+    from{
+        transform: translate(-90px, -19px);
+    }
+}
+
+
+
+.onda1{
+    animation: wavesMove 3s ease-in-out infinite alternate;
+}
+
+.onda2{
+    animation: wavesMove2 1.5s ease-in-out infinite alternate;
+}
+
+.onda3{
+    animation: wavesMove3 4s ease-in-out infinite alternate;
+}
+
+
+
+
+
+
+.hamburguer{
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: black;
+    top: 29px;
+    left: 15px;
+    transition: .5s ease-in-out;
+}
+
+
+.hamburguer::before , .hamburguer::after{
+    background: black;
+    content: '';
+    width: 100% ;
+    height: 100%;
+    position: absolute;
+    transition: .5s ease-in-out;
+
+}
+
+.hamburguer::before{
+    top: -10px;
+
+}
+
+.hamburguer::after{
+    bottom: -10px;
+
+}
+
+#menu-hamburguer{
+
+
+    bottom: 25px;
+    right: 25px;
+}
+
+
+#menu-hamburguer:checked ~ label .hamburguer{
+    transform: rotate(45deg);
+}
+
+
+#menu-hamburguer:checked ~ label .hamburguer::before{
+    transform: rotate(90deg);
+    top: 0;
+}
+
+#menu-hamburguer:checked ~ label .hamburguer::after{
+    transform: rotate(90deg);
+    bottom: 0;
+}
+.verify{
+    position: relative;
+    height: 80px;
+    width: 80px;
+    cursor: pointer;
+    bottom: 10px;
+    right: 10px;
+}
+.menu{
+    background-color: white;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    transition: box-shadow 1s ease-in-out;
+
+}
+
+.checkmenu{
+    display: none;}
+
+
+    .menu:hover{
+        box-shadow: 0 0 0 8px white, 0 0 0 8px white ;
+    }
+
+    
+    #menu-hamburguer:checked ~ label .menu{
+    box-shadow: 0 0 0 100vw white, 0 0 0 100vh white ;
+    
+}
+
+
+#menu-hamburguer:checked ~ ul {
+    opacity: 1;
+   
+}
+
+
+select-selected{
+    background-color: aqua transparent transparent transparent;
+}
+
+
+
+@keyframes gradient {
+    0%{ background-position: 0,50%;}
+    50%{ background-position: 100%;}
+    100%{ background-position: 0,50%;}
+    
+}
